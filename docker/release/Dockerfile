@@ -1,0 +1,9 @@
+FROM gkatz/todobackend-base:latest
+MAINTAINER Gabriel Katz <gkatz@gmx.net>
+
+COPY target /wheelhouse
+
+RUN . /appenv/bin/activate && \
+	pip install --no-index -f /wheelhouse todobackend && \
+    rm -rf /wheelhouse
+
