@@ -1,0 +1,4 @@
+FROM nginx
+MAINTAINER  Gabriel Katz <gkatz@gmx.net>
+
+COPY todobackend.conf /etc/nginx/conf.d/todobackend.conf
